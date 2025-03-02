@@ -1,11 +1,13 @@
 class GitImportContributions < Formula
   desc "Tool to import contributions into a Git repository from stats or other repositories"
   homepage "https://github.com/miromannino/Contributions-Importer-For-Github"
-  url "https://github.com/miromannino/Contributions-Importer-For-Github/archive/refs/tags/2.0.1.tar.gz"
-  sha256 "b8d24d344fccf56cc2a95e1e079e1599cbc415344b3817f204f1566ad5ba4f85"
+  url "https://github.com/miromannino/Contributions-Importer-For-Github/archive/refs/tags/2.0.2.tar.gz"
+  sha256 "215d0b5bf185cdbced3d45760c4c97c07a2a205158d74e8a9db3b9d13906803c"
   license "MIT"
 
-  depends_on "python@3.9"
+depends_on "python" => :recommended
+depends_on "python" => ">=3.11"
+
 
   def install
     system "pip3", "install", "--prefix=#{prefix}", "gitpython"
